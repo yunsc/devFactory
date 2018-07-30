@@ -1,0 +1,39 @@
+BEGIN TRANSACTION;
+CREATE TABLE album (
+        id INTEGER primary key autoincrement,
+        title text,
+        artist_id integer
+    );
+INSERT INTO "album" VALUES(1,'IV',1);
+INSERT INTO "album" VALUES(2,'who made who',2);
+CREATE TABLE artist (
+        id INTEGER primary key autoincrement,
+        name text
+    );
+INSERT INTO "artist" VALUES(1,'Led Zepplin');
+INSERT INTO "artist" VALUES(2,'AC/DC');
+CREATE TABLE genre (
+        id INTEGER primary key autoincrement,
+        name text
+    );
+INSERT INTO "genre" VALUES(1,'Rock');
+INSERT INTO "genre" VALUES(2,'Metal');
+DELETE FROM "sqlite_sequence";
+INSERT INTO "sqlite_sequence" VALUES('artist',2);
+INSERT INTO "sqlite_sequence" VALUES('genre',2);
+INSERT INTO "sqlite_sequence" VALUES('album',2);
+INSERT INTO "sqlite_sequence" VALUES('track',4);
+CREATE TABLE track (
+        id INTEGER primary key autoincrement,
+        title text,
+        length INTEGER,
+        rating INTEGER,
+        count INTEGER,
+        album_id INTEGER,
+        genre_id INTEGER
+    );
+INSERT INTO "track" VALUES(1,'Black Dog',NULL,NULL,NULL,1,1);
+INSERT INTO "track" VALUES(2,'stairway',NULL,NULL,NULL,1,2);
+INSERT INTO "track" VALUES(3,'About to Rock',NULL,NULL,NULL,2,1);
+INSERT INTO "track" VALUES(4,'Who Made Who',NULL,NULL,NULL,2,2);
+COMMIT;

@@ -1,0 +1,11 @@
+======================================
+복습
+
+mutable 4 = bytearray, list, set, dictionary
+문자열타입 3
+시퀀스타입 5 = str, byte, bytearray, list, tuple
+시퀀스X (순서x,중복x) = int형 4가지, set, frozenset, dictionary
+
+iterable = 문자열 3개, list, tuple, set, frozenset, dictionary
+=======================================
+

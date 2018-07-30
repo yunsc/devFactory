@@ -1,0 +1,17 @@
+웹 기반 시스템을 기반으로 하는 input을 정해와
+1. 주소 변수 넣는 path
+2. get방식인데 주소 말고 ?
+3. form 이용한 방식
+
+==============================
+web page는 숫자를 입력 못해. 
+@app.route('/hello/<int:hello_id>')
+def hello_test(hello_id):
+    return '%d'%hello_id
+
+식으로 써야함
+terminal에서 app.url_map
+
+url_for()
+<a class="dropdown-item" href="{{ url_for('render_world16',path='18') }}">20180718</a>
+

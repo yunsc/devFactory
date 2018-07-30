@@ -1,0 +1,37 @@
+부트스트랩 보일러 플레이트
+github fork 이후, base.html 가져와
+html5 보일러 플레이트 index.html의 meta를 가져와
+부트스트랩 홈페이지에서 nav가져와 
+{%  -%}
+나중에 소스코드 볼 때 빈 줄이 없어진다. 보기 좋음
+
+{% include %}
+container, container-fluid
+
+form action 
+- 어떤 주소에 처리를 할까
+- 처리해 줄 주소 값
+- 저 주소를 칠 때 처리해 달라
+
+get방식 post방식
+
+용어 표기방식 
+- 파스칼, 스네이크 등등
+
+KeyError: 'A secret key is required to use CSRF.'
+보안문제때문에 안됩니다. 라는 뜻
+
+https://flask-wtf.readthedocs.io/en/stable/config.html
+WTF_CSRF_SECRET_KEY를 설정해줘야함
+
+다같이 관리를 하면 효율성이 좋다.
+
+터미널에서//
+import sqlalchemy 한 후에 db를 사용하려면 from app import db로 가져온다.
+db.create_all()을 해야 db가 생김
+sqlite:///test.db  <<< 윈도우는 /// 3개면 충분. 안만들어지면 4개로 ㄱㄱ
+
+=======================복습ㄱㄱㄱ=======================
+text는 indexing, slicing 다 됨, plat임 문자열만 됨 / container는 리스트도 가능
+스트링에 관한 포맷은 포맷팅이 가능하다. 넓게보면 템플릿의 일종이다.
+

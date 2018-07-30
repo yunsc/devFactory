@@ -1,0 +1,54 @@
+GIT
+
+git diff
+git commit -a 
+=> add와 commit 동시에 한 번에 할 수 있음
+commit 시에는 주석 풀어줘야 함
+
+하지만 새로 추가된 애들은 git add 이후 commit을 해야 된다.
+기존의 것을 계속 수정할 시에는 git commit -a 로 가능
+
+git reset --hard (commit 주소)
+- 지금까지 작업했던 것을 리셋함
+git reset --mixed
+- 파일은 그대로 있고 변경사항을 원래대로 돌리는 것
+맨 처음 add한 부분만 있고 나머지는 없는 Untrackable 표기
+git reset --soft (HEAD)
+- commit부분을 초기화 한다.
+- head 옵션을 주면 마지막에 했던 commit으로 돌아간다.
+
+=> 로그 자체가 사라져 버리니 뒤로 다시 돌아갈 수가 없다.
+
+index 파일 = add하고 commit한 부분이 들어가있는 파일
+.gitignore = git에서 관리하지 않아도 되는 파일 지정
+
+git show (commit 주소)
+- commit 주소를 전부다 안쳐도 일부만 쳐도 확인가능
+- 일부가 겹친다면, 최신의 커밋이 실행된다.
+=> git tag (tag 명) (commit 주소) 태그를 지정한 뒤에
+=> git show (tag 명) 으로 가능
+
+깃 주소 연결시키기
+0.>git config --global user.email (계정 아이디) // git config --global user.name (닉네임) 설정
+1. >git remote add origin https://github.com/yunsc/bigdata_KoreaUniv.git
+>git push -u origin master
+
+충돌이 일어나면 사람이 직접 수정해주고 add 하고 commit 후 push
+2. >git clone https://github.com/yunsc/bigdata_KoreaUniv_Test.git
+
+Branch
+git branch - 브런치 목록 확인
+git branch (만들 브런치명)
+git branch -d (지울 브런치명)
+git checkout (바꿀 브런치명)
+
+(마스터로 브런치 변경 후)
+git merge (합칠 브런치명)
+git mergetool
+
+=============================================
+git status
+git add .
+git commit -m "메세지"
+(git pull)
+git push
